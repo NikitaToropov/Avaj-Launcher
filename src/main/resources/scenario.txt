@@ -1,0 +1,13 @@
+30
+Baloon ШарикЯКакИТыБылДельтаплан 10 10 30
+JetPlane RocketMain 30 30 30
+Helicopter Вертикуттер 20 20 30
+Helicopter ЧернаяАкула 100 100 50
+JetPlane ЧеловекПтица 200 200 99
+Baloon AMANBEK-420 99 99 99
+Baloon CМоегоДняРождения 35 86 11
+Helicopter УберТалет 74 51 66
+JetPlane UFO 34 999 46
+JetPlane ШУЕ 35 999 46
+JetPlane ППШ 33 999 46
+Helicopter НеТотВертолетЧтоВыИщите 999 999 99
