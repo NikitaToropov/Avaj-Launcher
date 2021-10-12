@@ -16,8 +16,6 @@ public class Main {
         } catch (RuntimeException | IOException | InvalidContentException e) {
             e.printStackTrace();
         }
-
-
     }
 
     private static void handleInput(String[] args) throws IOException, MD5Exception, InvalidContentException {
@@ -27,9 +25,4 @@ public class Main {
             MD5Parser.validateFile(args[0], args[1]);
         }
     }
-
-    public static void greeting() {
-        System.out.println("Hello my comrades!");
-    }
-
 }

@@ -1,6 +1,5 @@
 package simulator.flyable;
 
-import simulator.tower.WeatherProvider;
 import simulator.tower.WeatherTower;
 
 import java.io.IOException;
@@ -59,5 +58,4 @@ public class Baloon extends Aircraft implements Flyable {
     public String getType() {
         return "Baloon";
     }
-
 }

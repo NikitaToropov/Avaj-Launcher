@@ -4,7 +4,6 @@ import simulator.flyable.Flyable;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -71,5 +70,4 @@ public class ScenarioParser {
     public List<Flyable> getFlyableList() {
         return new LinkedList<>(flyableList);
     }
-
 }

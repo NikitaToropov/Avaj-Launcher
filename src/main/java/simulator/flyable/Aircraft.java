@@ -5,15 +5,18 @@ import simulator.tower.WeatherProvider;
 import simulator.tower.WeatherTower;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Random;
+import java.util.Set;
 
 public abstract class Aircraft {
 
     public static final Set<String> TYPES = new HashSet<>(Arrays.asList("Baloon", "JetPlane", "Helicopter"));
-
     protected static final int LONGITUDE = 0;
     protected static final int LATITUDE = 1;
     protected static final int HEIGHT = 2;
+    public static final String AIRCRAFT_MESSAGING = "%s#%s(%d): %s\n";
 
     protected long id;
     protected String name;
@@ -37,8 +40,7 @@ public abstract class Aircraft {
         int height = coordinates.getHeight() + behavior[weatherIndex][HEIGHT];
         if (height > 100) {
             height = 100;
-        }
-        else if (height <= 0) {
+        } else if (height <= 0) {
             height = 0;
         }
 
@@ -71,10 +73,7 @@ public abstract class Aircraft {
     public void say(WeatherTower weatherTower) throws IOException {
         int weatherIndex = WeatherProvider.getWeatherIndex(weatherTower.getWeather(coordinates)) % messages.length;
         int randomIndex = Math.abs(random.nextInt()) % messages[weatherIndex].length;
-        Launcher.writer.write(getType() + "#" + getName() + "(" + getId() + "): " + messages[weatherIndex][randomIndex]
-                //        + " [" + coordinates.getLongitude() + "; " + coordinates.getLatitude() + "; " + coordinates.getHeight() + "]"
-                + "\n"
-        );
+        Launcher.writer.write(String.format(AIRCRAFT_MESSAGING, getType(), getName(), getId(), messages[weatherIndex][randomIndex]));
     }
 
 }

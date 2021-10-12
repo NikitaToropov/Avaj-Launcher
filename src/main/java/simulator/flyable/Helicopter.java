@@ -1,6 +1,5 @@
 package simulator.flyable;
 
-import simulator.tower.WeatherProvider;
 import simulator.tower.WeatherTower;
 
 import java.io.IOException;
